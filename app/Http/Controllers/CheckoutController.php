@@ -47,6 +47,13 @@ class CheckoutController extends Controller
                 'code' => $trs
             ]);
         }
+
+        // Cart::with(['product', 'user'])
+        //     ->where('users_id', Auth::user()->id)
+        //     ->delete();
+
+        Cart::where('users_id', Auth::user()->id)->delete();
+
         // return dd($transaction);
 
         // Konfigurasi Midtrans
