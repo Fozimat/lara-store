@@ -22,7 +22,7 @@ User
                                 <table class="table table-hover scroll-horizontal-vertical w-100" id="crudTable">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
+                                            <th>No</th>
                                             <th>Nama</th>
                                             <th>Email</th>
                                             <th>Roles</th>
@@ -51,7 +51,7 @@ User
                 url: '{!! url()->current() !!}'
             },
             columns: [
-                { data: 'id', name: 'id' },
+                { data: 'DT_RowIndex', name: 'created_at' },
                 { data: 'name', name: 'name' },
                 { data: 'email', name: 'email' },
                 { data: 'roles', name: 'roles' },
