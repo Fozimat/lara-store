@@ -33,7 +33,8 @@
                         class="list-group-item list-group-item-action {{ (request()->is('admin/product-gallery*')) ? 'active' : '' }}">Galleries</a>
                     <a href="{{ route('category.index') }}"
                         class="list-group-item list-group-item-action {{ (request()->is('admin/category*')) ? 'active' : '' }}">Categories</a>
-                    <a href="#" class="list-group-item list-group-item-action">Transactions</a>
+                    <a href="{{ route('transaction.index') }}"
+                        class="list-group-item list-group-item-action {{ (request()->is('admin/transaction*')) ? 'active' : '' }}">Transactions</a>
                     <a href="{{ route('user.index') }}"
                         class="list-group-item list-group-item-action {{ (request()->is('admin/user*')) ? 'active' : '' }}">Users</a>
                     <a href="#" class="list-group-item list-group-item-action">Sign Out</a>
@@ -61,7 +62,7 @@
                                     aria-haspopup="true" aria-expanded="false">
                                     <img src="/images/icon-user.png" alt=""
                                         class="rounded-circle mr-2 profile-picture" />
-                                    Hi, Angga
+                                    Hi, {{ Auth::user()->name }}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     {{-- <div class="dropdown-divider"></div> --}}
@@ -72,7 +73,7 @@
                         <!-- Mobile Menu -->
                         <ul class="navbar-nav d-block d-lg-none mt-3">
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> Hi, Angga </a>
+                                <a class="nav-link" href="#"> Hi, {{ Auth::user()->name }} </a>
                             </li>
                         </ul>
                     </div>
